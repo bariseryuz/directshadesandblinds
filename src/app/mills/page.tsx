@@ -47,11 +47,18 @@ export default function MillsPage() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 min-h-screen flex items-center justify-center">
         {/* Text Content */}
-        <div className="relative z-10 text-center">
-          <h1 className="text-2xl sm:text-3xl font-semibold">Mill & Manufacturing Partnerships</h1>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/80 max-w-3xl mx-auto">
-            Our mill-direct relationships provide quality control and reliable lead times with consistent sourcing at scale.
-          </p>
+        <div className="relative z-10 text-center max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 sm:mb-8">
+            Mill & Manufacturing Partnership
+          </h1>
+          <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
+            <p>
+              Our factory-direct partnership with Vertilux gives Direct Shades & Blinds a distinct advantage on every project. By working directly with the manufacturer, we maintain tight quality control, predictable lead times, and consistent product availability at scale.
+            </p>
+            <p>
+              This direct relationship eliminates unnecessary intermediaries—allowing us to move faster, reduce risk, and deliver competitive pricing without compromising performance or finish quality. The result is a more reliable window-covering scope that aligns with construction schedules and supports efficient project delivery nationwide.
+            </p>
+          </div>
         </div>
       </div>
     </div>
