@@ -26,4 +26,8 @@ around the 15 $ a month credit would be totally enough
 
 
 
-
+-Created Reposotory on GİtHıb 
+-Pulled it to Raiway 
+-git commit -m "Update Next.js to 14.2.35 - fix security vulnerabilities" (Due to security reasons.)
+-Cretaed Ralway Configuration
+-Bought the Plan 
