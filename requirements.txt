@@ -1,0 +1,129 @@
+Make sure to leave madeia sections empthy but add a tag that says maybe a media sign on them 
+
+Website Refresh – One-Page Outline
+Objective
+Refresh the DirectShadesAndBlinds.com website to feel modern, clean, and current, while clearly communicating who we are, 
+the scale of our work, and our value as a national commercial window-covering partner. 
+The site should emphasize projects, mill partnerships, and credibility, without being text-heavy.
+
+Overall Direction
+Clean, modern commercial aesthetic
+
+Strong use of project photography
+
+Simple navigation (6–7 main pages max)
+
+Mobile-first and fast loading
+
+Clear calls-to-action for bid requests
+
+Recommended Site Structure
+
+
+1. Home
+Strong hero image or short video of commercial projects  (This is important.)
+After the media section I want the next part of the webpage to scrollover the media when client scrolls down.
+
+Clear positioning statement (national commercial window coverings)
+
+Primary CTA: Request a Bid  (On top of media )
+
+Secondary CTA: View Projects (On top of media )
+
+Brief services overview  (Make it slide 2)
+
+Featured projects (3–4) (make it slide 2)
+
+Mill partnership highlight (Make it Slide 3)
+
+Trust indicators (markets served, partners, or logos if approved) (Make this a loop that has 20 ceritficates that slides from left to right in infinity mode)
+
+
+
+2. About
+Short company overview and story
+
+High-level leadership/team introduction
+
+What differentiates Direct Shades & Blinds:
+
+National reach
+
+Mill-direct sourcing
+
+Proven commercial execution
+
+3. Services
+Commercial window coverings
+
+Project types: multifamily, hospitality, healthcare, office
+
+Turnkey execution from bid through installation
+
+Motorization / automation (high level)
+
+4. Projects
+Project gallery
+
+Individual project pages with:
+
+Project name & location
+
+Developer & GC
+
+Scope of work
+
+Photos
+
+(Optional) Current projects section
+
+5. Mill & Manufacturing Partnerships
+Overview of mill-direct relationships
+
+Quality control and sourcing advantages
+
+Reliability, lead times, and consistency
+
+6. Markets
+Nationwide coverage overview
+
+Key regions or states served
+
+Representative project examples
+
+7. Contact / Request a Bid
+Simple bid request form
+
+Plan upload capability
+
+General contact information
+
+Clear next steps after submission
+
+Footer
+Quick links
+
+Markets served
+
+Contact info
+
+LinkedIn
+
+Privacy & terms
+
+
+
+Examples of site I like: 
+
+Suffolk-Open-Graph-Smaller.jpg
+Home | Suffolk Construction
+suffolk.com
+ 
+
+[screen_title] [separator] [site_title].jpeg.webp
+Home
+hollandpartnergroup.com
+
+sbicard.jpg
+SBI Builders, Inc.
+sbibuilders.com 
