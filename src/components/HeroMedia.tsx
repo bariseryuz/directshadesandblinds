@@ -10,26 +10,51 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
-    // Attempt autoplay (may be blocked until user gesture in some browsers)
+    
+    // Ping-pong loop: play forward then backwards
+    let isPlayingForward = true;
+    
+    const handleTimeUpdate = () => {
+      if (!v) return;
+      
+      // When playing forward and near the end (6 seconds), reverse
+      if (isPlayingForward && v.currentTime >= 6) {
+        v.playbackRate = -1;
+        isPlayingForward = false;
+      }
+      // When playing backward and near the start, go forward
+      else if (!isPlayingForward && v.currentTime <= 0.5) {
+        v.playbackRate = 1;
+        isPlayingForward = true;
+      }
+    };
+    
+    v.addEventListener('timeupdate', handleTimeUpdate);
+    
+    // Start playing
     const play = async () => {
-      try { await v.play(); } catch {}
+      try { 
+        v.playbackRate = 1;
+        await v.play(); 
+      } catch {}
     };
     play();
+    
+    return () => {
+      v.removeEventListener('timeupdate', handleTimeUpdate);
+    };
   }, []);
 
   return (
     <div className="hero-fixed-bg">
-      {/* Background media: leave actual media empty per requirement, show placeholder tag */}
+      {/* Background media with ping-pong loop effect */}
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
-        autoPlay
         muted
-        loop
         playsInline
         preload="auto"
         aria-hidden="true"
-        // Provide a local file in /public or use NEXT_PUBLIC_HERO_VIDEO_URL
         src={src}
         onError={() => {
           // Fallback to hero.mp4 if main.mp4 or external URL is missing
