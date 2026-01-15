@@ -193,6 +193,75 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Team Section */}
+        <section className="min-h-screen flex items-center bg-black/40 backdrop-blur-sm">
+          <div className="mx-auto max-w-7xl px-6 py-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 sm:mb-12 text-center">
+              Our Team
+            </h2>
+            
+            {/* Team Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              {/* Team Member 1 */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                  {/* Photo Placeholder */}
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
+                    👤
+                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Name Here
+                  </h3>
+                  <p className="text-sm text-white/60 text-center mb-3">
+                    Title / Position
+                  </p>
+                  <p className="text-sm text-white/80 leading-relaxed">
+                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 2 */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
+                    👤
+                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Name Here
+                  </h3>
+                  <p className="text-sm text-white/60 text-center mb-3">
+                    Title / Position
+                  </p>
+                  <p className="text-sm text-white/80 leading-relaxed">
+                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 3 */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
+                    👤
+                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Name Here
+                  </h3>
+                  <p className="text-sm text-white/60 text-center mb-3">
+                    Title / Position
+                  </p>
+                  <p className="text-sm text-white/80 leading-relaxed">
+                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
