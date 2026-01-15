@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function HeroMedia({ dim = 0 }: { dim?: number }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const initial = process.env.NEXT_PUBLIC_HERO_VIDEO_URL || '/main.mp4';
+  const initial = process.env.NEXT_PUBLIC_HERO_VIDEO_URL || '/home.mp4';
   const [src, setSrc] = useState<string>(initial);
 
   useEffect(() => {
@@ -57,8 +57,8 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
         aria-hidden="true"
         src={src}
         onError={() => {
-          // Fallback to hero.mp4 if main.mp4 or external URL is missing
-          if (src !== '/main.mp4') setSrc('/main.mp4');
+          // Fallback to home.mp4 if external URL is missing
+          if (src !== '/home.mp4') setSrc('/home.mp4');
         }}
         onLoadedData={() => {
           const v = videoRef.current;
