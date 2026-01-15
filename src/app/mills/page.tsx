@@ -45,11 +45,11 @@ export default function MillsPage() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 md:py-24">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 min-h-screen flex items-center justify-center">
         {/* Text Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 text-center">
           <h1 className="text-2xl sm:text-3xl font-semibold">Mill & Manufacturing Partnerships</h1>
-          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/80 max-w-3xl">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/80 max-w-3xl mx-auto">
             Our mill-direct relationships provide quality control and reliable lead times with consistent sourcing at scale.
           </p>
         </div>

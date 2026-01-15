@@ -397,7 +397,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section - Final layer */}
-        <section className="relative z-50 py-8 sm:py-12 md:py-16 bg-zinc-900 rounded-t-3xl sm:rounded-t-[3rem] rounded-b-3xl sm:rounded-b-[3rem]">
+        <section className="relative z-50 py-8 sm:py-12 md:py-16 bg-black/70 backdrop-blur-sm rounded-t-3xl sm:rounded-t-[3rem] rounded-b-3xl sm:rounded-b-[3rem]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
             <h2 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white mb-2 sm:mb-3 px-4">
               Ready to Start Your Project?
