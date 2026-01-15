@@ -87,11 +87,6 @@ export function CertificatesMarquee() {
           height: 100%;
           object-fit: contain;
         }
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          z-index: 2;
-        }
 
         @keyframes scroll {
           0% {
