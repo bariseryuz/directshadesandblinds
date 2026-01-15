@@ -1,28 +1,24 @@
 "use client";
 
+import Image from 'next/image';
+
 export function CertificatesMarquee() {
   const certificates = [
-    { name: "ISO", gradient: "#000000", icon: "🏆" },
-    { name: "LEED", gradient: "#000000", icon: "🌿" },
-    { name: "GREENGUARD", gradient: "#000000", icon: "✓" },
-    { name: "NFPA", gradient: "#000000", icon: "🔥" },
-    { name: "OEKO-TEX", gradient: "#000000", icon: "♻️" },
-    { name: "CPSC", gradient: "#000000", icon: "🛡️" },
-    { name: "ADA", gradient: "#000000", icon: "♿" },
-    { name: "BIFMA", gradient: "#000000", icon: "📋" },
-    { name: "ANSI", gradient: "#000000", icon: "⚙️" },
-    { name: "ASTM", gradient: "#000000", icon: "🔬" },
-    { name: "UL", gradient: "#000000", icon: "⚡" },
-    { name: "CE", gradient: "#000000", icon: "🇪🇺" },
-    { name: "REACH", gradient: "#000000", icon: "🧪" },
-    { name: "RoHS", gradient: "#000000", icon: "🚫" },
-    { name: "EPA", gradient: "#000000", icon: "🌍" },
-    { name: "CARB", gradient: "#000000", icon: "🌲" },
-    { name: "FSC", gradient: "#000000", icon: "🌳" },
-    { name: "SCS", gradient: "#000000", icon: "📊" },
-    { name: "NAHB", gradient: "#000000", icon: "🏠" },
-    { name: "IWCA", gradient: "#000000", icon: "🪟" },
-    { name: "WCMA", gradient: "#000000", icon: "✨" },
+    { name: "ISO 9001", image: "/logo_iso9001.png" },
+    { name: "ISO 14001", image: "/logo_iso14001.png" },
+    { name: "LEED", image: "/logo_USGBC.png" },
+    { name: "GREENGUARD", image: "/logo_greenguard_gold.png" },
+    { name: "NFPA", image: "/logo_NFPA.png" },
+    { name: "OEKO-TEX", image: "/logo_oekotex_EN.png" },
+    { name: "Lead Free", image: "/logo_lead_free.png" },
+    { name: "Prop 65", image: "/Logo_Prop_65_compliant_fullcolor.png" },
+    { name: "Phthalate Free", image: "/logo_phtalate-free.jpg" },
+    { name: "AITEX", image: "/logo_aitex.png" },
+    { name: "EMAS", image: "/logo_emas.png" },
+    { name: "Ecocodice", image: "/logo_ecocodice.png" },
+    { name: "Sanitized", image: "/logo_sanitized.png" },
+    { name: "IMO", image: "/logo_imo_wheelmark.png" },
+    { name: "Microterm", image: "/Logo_Microterm.png" },
   ];
 
   // Duplicate certificates for seamless loop
@@ -38,10 +34,14 @@ export function CertificatesMarquee() {
               <div
                 key={`${cert.name}-${index}`}
                 className="marquee-item"
-                style={{ background: cert.gradient }}
               >
-                <span className="cert-icon">{cert.icon}</span>
-                <span className="cert-name">{cert.name}</span>
+                <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  width={48}
+                  height={48}
+                  className="cert-logo"
+                />
               </div>
             ))}
           </div>
@@ -76,28 +76,17 @@ export function CertificatesMarquee() {
           height: 48px;
           border-radius: 0.75rem;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          gap: 0.25rem;
-          position: relative;
+          background: white;
+          padding: 0.25rem;
         }
 
-        .cert-icon {
-          font-size: 1.25rem;
-          line-height: 1;
-          z-index: 2;
+        .cert-logo {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
-
-        .cert-name {
-          font-size: 0.5rem;
-          font-weight: 700;
-          color: white;
-          position: absolute;
-          bottom: 2px;
-          text-align: center;
-          line-height: 1;
-          max-width: 90%;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
