@@ -11,6 +11,8 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
     const v = videoRef.current;
     if (!v) return;
     
+    console.log('Video element loaded, src:', src);
+    
     // Ping-pong loop: play forward then backwards
     let isPlayingForward = true;
     
@@ -21,11 +23,13 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
       if (isPlayingForward && v.currentTime >= 6) {
         v.playbackRate = -1;
         isPlayingForward = false;
+        console.log('Reversing at', v.currentTime);
       }
       // When playing backward and near the start, go forward
       else if (!isPlayingForward && v.currentTime <= 0.5) {
         v.playbackRate = 1;
         isPlayingForward = true;
+        console.log('Going forward at', v.currentTime);
       }
     };
     
@@ -35,15 +39,18 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
     const play = async () => {
       try { 
         v.playbackRate = 1;
-        await v.play(); 
-      } catch {}
+        await v.play();
+        console.log('Video playing');
+      } catch (e) {
+        console.error('Video play failed:', e);
+      }
     };
     play();
     
     return () => {
       v.removeEventListener('timeupdate', handleTimeUpdate);
     };
-  }, []);
+  }, [src]);
 
   return (
     <div className="hero-fixed-bg">
@@ -51,16 +58,19 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
+        autoPlay
         muted
         playsInline
         preload="auto"
         aria-hidden="true"
         src={src}
-        onError={() => {
+        onError={(e) => {
+          console.error('Video error:', e);
           // Fallback to home.mp4 if external URL is missing
           if (src !== '/home.mp4') setSrc('/home.mp4');
         }}
         onLoadedData={() => {
+          console.log('Video loaded successfully');
           const v = videoRef.current;
           if (v) { try { v.play(); } catch {} }
         }}
