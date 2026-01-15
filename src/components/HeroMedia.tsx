@@ -19,28 +19,39 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
     const handleTimeUpdate = () => {
       if (!v) return;
       
-      // When playing forward and near the end (6 seconds), reverse
-      if (isPlayingForward && v.currentTime >= 6) {
-        v.playbackRate = -1;
-        isPlayingForward = false;
+      // When playing forward and reach 6 seconds, reverse
+      if (isPlayingForward && v.currentTime >= 6.0) {
         console.log('Reversing at', v.currentTime);
+        v.playbackRate = -1.0;
+        isPlayingForward = false;
       }
       // When playing backward and near the start, go forward
-      else if (!isPlayingForward && v.currentTime <= 0.5) {
-        v.playbackRate = 1;
-        isPlayingForward = true;
+      else if (!isPlayingForward && v.currentTime <= 0.3) {
         console.log('Going forward at', v.currentTime);
+        v.playbackRate = 1.0;
+        isPlayingForward = true;
       }
     };
     
     v.addEventListener('timeupdate', handleTimeUpdate);
     
+    // Also add ended event as fallback
+    const handleEnded = () => {
+      console.log('Video ended, restarting');
+      v.currentTime = 0;
+      v.playbackRate = 1.0;
+      isPlayingForward = true;
+      v.play();
+    };
+    
+    v.addEventListener('ended', handleEnded);
+    
     // Start playing
     const play = async () => {
       try { 
-        v.playbackRate = 1;
+        v.playbackRate = 1.0;
         await v.play();
-        console.log('Video playing');
+        console.log('Video playing, duration:', v.duration);
       } catch (e) {
         console.error('Video play failed:', e);
       }
@@ -49,6 +60,7 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
     
     return () => {
       v.removeEventListener('timeupdate', handleTimeUpdate);
+      v.removeEventListener('ended', handleEnded);
     };
   }, [src]);
 
@@ -57,7 +69,7 @@ export default function HeroMedia({ dim = 0 }: { dim?: number }) {
       {/* Background media with ping-pong loop effect */}
       <video
         ref={videoRef}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
         autoPlay
         muted
         playsInline
