@@ -118,7 +118,7 @@ export default function HomePage() {
         preload="metadata"
         className="fixed inset-0 w-full h-full opacity-50 sm:opacity-60 mobile-video"
       >
-        <source src="/main.mp4" type="video/mp4" />
+        <source src="/home.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay - Stronger on mobile for better text readability */}
