@@ -28,10 +28,12 @@ export default function MarketsPage() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 md:py-24 pb-24">
-        <h1 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Markets We Serve</h1>
-        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/80 max-w-3xl mb-8 sm:mb-12">
-          Nationwide coverage with representative projects in key regions. We serve multifamily, hospitality, healthcare, and office markets.
-        </p>
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Markets We Serve</h1>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/80 max-w-3xl mx-auto">
+            Nationwide coverage with representative projects in key regions. We serve multifamily, hospitality, healthcare, and office markets.
+          </p>
+        </div>
         
         <USMarketMap />
       </div>
