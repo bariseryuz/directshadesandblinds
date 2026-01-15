@@ -6,27 +6,21 @@ export function CertificatesDock() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const certificates = [
-    { name: "ISO", gradient: "#000000", icon: "🏆" },
-    { name: "LEED", gradient: "#000000", icon: "🌿" },
-    { name: "GREENGUARD", gradient: "#000000", icon: "✓" },
-    { name: "NFPA", gradient: "#000000", icon: "🔥" },
-    { name: "OEKO-TEX", gradient: "#000000", icon: "♻️" },
-    { name: "CPSC", gradient: "#000000", icon: "🛡️" },
-    { name: "ADA", gradient: "#000000", icon: "♿" },
-    { name: "BIFMA", gradient: "#000000", icon: "📋" },
-    { name: "ANSI", gradient: "#000000", icon: "⚙️" },
-    { name: "ASTM", gradient: "#000000", icon: "🔬" },
-    { name: "UL", gradient: "#000000", icon: "⚡" },
-    { name: "CE", gradient: "#000000", icon: "🇪🇺" },
-    { name: "REACH", gradient: "#000000", icon: "🧪" },
-    { name: "RoHS", gradient: "#000000", icon: "🚫" },
-    { name: "EPA", gradient: "#000000", icon: "🌍" },
-    { name: "CARB", gradient: "#000000", icon: "🌲" },
-    { name: "FSC", gradient: "#000000", icon: "🌳" },
-    { name: "SCS", gradient: "#000000", icon: "📊" },
-    { name: "NAHB", gradient: "#000000", icon: "🏠" },
-    { name: "IWCA", gradient: "#000000", icon: "🪟" },
-    { name: "WCMA", gradient: "#000000", icon: "✨" },
+    { name: "ISO 9001", image: "/logo_iso9001.png" },
+    { name: "ISO 14001", image: "/logo_iso14001.png" },
+    { name: "LEED", image: "/logo_USGBC.png" },
+    { name: "GREENGUARD", image: "/logo_greenguard_gold.png" },
+    { name: "NFPA", image: "/logo_NFPA.png" },
+    { name: "OEKO-TEX", image: "/logo_oekotex_EN.png" },
+    { name: "Lead Free", image: "/logo_lead_free.png" },
+    { name: "Prop 65", image: "/Logo_Prop_65_compliant_fullcolor.png" },
+    { name: "Phthalate Free", image: "/logo_phtalate-free.jpg" },
+    { name: "AITEX", image: "/logo_aitex.png" },
+    { name: "EMAS", image: "/logo_emas.png" },
+    { name: "Ecocodice", image: "/logo_ecocodice.png" },
+    { name: "Sanitized", image: "/logo_sanitized.png" },
+    { name: "IMO", image: "/logo_imo_wheelmark.png" },
+    { name: "Microterm", image: "/Logo_Microterm.png" },
   ];
 
   const handleClick = (index: number) => {
@@ -43,10 +37,9 @@ export function CertificatesDock() {
               <button
                 onClick={() => handleClick(index)}
                 className="block__item"
-                style={{ "--bg": cert.gradient } as React.CSSProperties}
                 title={cert.name}
               >
-                <span className="cert-icon">{cert.icon}</span>
+                <img src={cert.image} alt={cert.name} className="cert-logo-img" />
                 <span className={`cert-name ${activeIndex === index ? 'active' : ''}`}>
                   {cert.name}
                 </span>
@@ -143,7 +136,7 @@ export function CertificatesDock() {
           max-height: 48px;
           aspect-ratio: 1;
           border-radius: 0.75rem;
-          background: var(--bg);
+          background: white;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -156,7 +149,14 @@ export function CertificatesDock() {
           border: none;
           cursor: pointer;
           gap: 0.25rem;
-          padding: 0;
+          padding: 0.25rem;
+        }
+
+        .cert-logo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          z-index: 2;
         }
 
         .cert-icon {
