@@ -216,7 +216,7 @@ export default function AboutPage() {
                   isSecondVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                 }`}
               >
-                Direct Shades &amp; Blinds provides national commercial window-covering solutions with mill-direct sourcing and proven execution. Our leadership team brings decades of experience in multifamily, hospitality, healthcare, and office projects.
+                Serving major markets across the United States, Direct Shades & Blinds delivers scalable, national window-covering solutions backed by mill-direct sourcing and experienced project execution. Our team supports multifamily, hospitality, healthcare, and office developments with the consistency required for regional and national portfolios.
               </p>
             </div>
           </div>
