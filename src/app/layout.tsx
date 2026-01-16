@@ -39,7 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex flex-wrap gap-6 mt-6">
               <a href="/markets" className="hover:text-white transition-colors">Markets</a>
               <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/direct-shades-blinds/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://www.instagram.com/directshadesandblinds/?igsh=djhyY3k1Z2J0aWJq&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
             </div>
             
             <div className="mt-6 text-xs">© {new Date().getFullYear()} All rights reserved.</div>

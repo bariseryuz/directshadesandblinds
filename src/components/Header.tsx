@@ -62,12 +62,12 @@ export function Header() {
         </div>
         
         {/* Desktop: All elements in centered flex container */}
-        <div className="hidden lg:flex items-center justify-center gap-6 w-full h-full relative">
-          <span className="absolute left-6 text-xl font-bold tracking-wide text-white">
+        <div className="hidden lg:flex items-center justify-between gap-6 w-full h-full relative px-6">
+          <span className="text-xl font-bold tracking-wide text-white">
             Direct Shades & Blinds
           </span>
           
-          <a href="/" className="flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105">
+          <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105">
             <div className="relative h-32 w-32 flex-shrink-0">
               <Image 
                 src="/logo.png" 
@@ -79,7 +79,7 @@ export function Header() {
             </div>
           </a>
           
-          <nav className="absolute right-6 flex gap-3 text-sm">
+          <nav className="flex gap-3 text-sm">
             {[
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
