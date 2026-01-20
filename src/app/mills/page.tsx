@@ -22,7 +22,7 @@ export default function MillsPage() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className="relative min-h-screen">
