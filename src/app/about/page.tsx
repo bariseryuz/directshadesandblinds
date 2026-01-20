@@ -172,7 +172,7 @@ export default function AboutPage() {
                         <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Tony D'Amato
+                        Tony D&apos;Amato
                       </h3>
                       <p className="text-sm text-white/60 text-center mb-3">
                         Executive Vice President Business Development
@@ -247,7 +247,7 @@ export default function AboutPage() {
                         <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Tony D'Amato
+                        Tony D&apos;Amato
                       </h3>
                       <p className="text-sm text-white/60 text-center mb-3">
                         Executive Vice President Business Development
