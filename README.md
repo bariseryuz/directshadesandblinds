@@ -1,4 +1,4 @@
-# Direct Shades & Blinds — Website
+# Direct Shades & Blinds Inc — Website
 
 Modern Next.js (App Router, TypeScript, Tailwind) site tailored for heavy media (hero video/image) with overlay slides that scroll over the media, plus core pages per requirements.
 

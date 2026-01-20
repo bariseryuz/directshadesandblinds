@@ -6,7 +6,7 @@ import { Header } from '@/components/Header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Direct Shades & Blinds',
+  title: 'Direct Shades & Blinds Inc',
   description: 'National commercial window coverings — bid-ready.',
   icons: {
     icon: '/logo.png',
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 py-6 md:py-10 text-sm text-white/70">
             <div className="flex flex-wrap gap-6 justify-between items-start">
               <div>
-                <div className="font-semibold">Direct Shades & Blinds</div>
+                <div className="font-semibold">Direct Shades & Blinds Inc</div>
                 <div>Nationwide commercial window coverings</div>
               </div>
             </div>

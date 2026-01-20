@@ -53,7 +53,7 @@ export default function MillsPage() {
           </h1>
           <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-white/90 leading-relaxed">
             <p>
-              Our factory-direct partnership with Vertilux gives Direct Shades & Blinds a distinct advantage on every project. By working directly with the manufacturer, we maintain tight quality control, predictable lead times, and consistent product availability at scale.
+              Our factory-direct partnership with Vertilux gives Direct Shades & Blinds Inc a distinct advantage on every project. By working directly with the manufacturer, we maintain tight quality control, predictable lead times, and consistent product availability at scale.
             </p>
             <p>
               This direct relationship eliminates unnecessary intermediaries—allowing us to move faster, reduce risk, and deliver competitive pricing without compromising performance or finish quality. The result is a more reliable window-covering scope that aligns with construction schedules and supports efficient project delivery nationwide.

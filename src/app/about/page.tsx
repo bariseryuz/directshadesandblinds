@@ -106,64 +106,159 @@ export default function AboutPage() {
               Our Team
             </h2>
             
-            {/* Team Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
-              {/* Team Member 1 */}
-              <div className="group">
-                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                  {/* Photo Placeholder */}
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
-                    👤
+            {/* Team Carousel */}
+            <div className="relative overflow-hidden">
+              <div className="flex animate-[slide_30s_linear_infinite] hover:pause-animation">
+                {/* First set */}
+                <div className="flex gap-8 shrink-0">
+                  {/* Team Member 1 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/davidcathers.png" alt="David Cathers" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        David Cathers
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        Chief Estimator at Direct Shades and Blinds
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white text-center mb-2">
-                    Name Here
-                  </h3>
-                  <p className="text-sm text-white/60 text-center mb-3">
-                    Title / Position
-                  </p>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
-                  </p>
+
+                  {/* Team Member 2 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Gene Goble
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        CEO, CFO, Owner at Direct Shades & Blinds, Inc.
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Team Member 4 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Branden Goble
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        VP and General Manager
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Team Member 5 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Tony D'Amato
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        Executive Vice President Business Development
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Duplicate set for seamless loop */}
+                <div className="flex gap-8 shrink-0 ml-8">
+                  {/* Team Member 1 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/davidcathers.png" alt="David Cathers" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        David Cathers
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        Chief Estimator at Direct Shades and Blinds
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Team Member 2 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Gene Goble
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        CEO, CFO, Owner at Direct Shades & Blinds, Inc.
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Team Member 4 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Branden Goble
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        VP and General Manager
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Team Member 5 */}
+                  <div className="group w-80 shrink-0">
+                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                        <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white text-center mb-2">
+                        Tony D'Amato
+                      </h3>
+                      <p className="text-sm text-white/60 text-center mb-3">
+                        Executive Vice President Business Development
+                      </p>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        Brief bio or description about this team member. Their experience, expertise, and role in the company.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Team Member 2 */}
-              <div className="group">
-                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
-                    👤
-                  </div>
-                  <h3 className="text-xl font-semibold text-white text-center mb-2">
-                    Name Here
-                  </h3>
-                  <p className="text-sm text-white/60 text-center mb-3">
-                    Title / Position
-                  </p>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
-                  </p>
-                </div>
-              </div>
-
-              {/* Team Member 3 */}
-              <div className="group">
-                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center text-4xl text-white/50">
-                    👤
-                  </div>
-                  <h3 className="text-xl font-semibold text-white text-center mb-2">
-                    Name Here
-                  </h3>
-                  <p className="text-sm text-white/60 text-center mb-3">
-                    Title / Position
-                  </p>
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    Brief bio or description about this team member. Their experience, expertise, and role in the company.
-                  </p>
-                </div>
-              </div>
-
             </div>
           </div>
         </section>
@@ -216,7 +311,7 @@ export default function AboutPage() {
                   isSecondVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                 }`}
               >
-                Serving major markets across the United States, Direct Shades & Blinds delivers scalable, national window-covering solutions backed by mill-direct sourcing and experienced project execution. Our team supports multifamily, hospitality, healthcare, and office developments with the consistency required for regional and national portfolios.
+                Serving major markets across the United States, Direct Shades & Blinds Inc delivers scalable, national window-covering solutions backed by mill-direct sourcing and experienced project execution. Our team supports multifamily, hospitality, healthcare, and office developments with the consistency required for regional and national portfolios.
               </p>
             </div>
           </div>

@@ -67,7 +67,7 @@ export default function ServicesPage() {
         {/* Slide 4 - Why Direct Shades & Blinds */}
         <div className="sticky top-0 h-[50vh] flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-slate-800/80">
           <div className="max-w-4xl px-6 py-8 backdrop-blur-sm rounded-lg mx-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white">Why Direct Shades & Blinds</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-white">Why Direct Shades & Blinds Inc</h2>
             <ul className="space-y-3 text-base md:text-lg text-white/90">
               <li>• One source, end-to-end execution reduces handoffs and risk</li>
               <li>• Schedule-driven delivery aligned with GC and developer timelines</li>
