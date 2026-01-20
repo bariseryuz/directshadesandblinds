@@ -137,6 +137,9 @@ export default function AboutPage() {
                   <p className="text-sm text-white/60 text-center">
                     Executive Vice President Business Development
                   </p>
+                  <a href="mailto:t.damato@directshadesandblinds.com" className="text-sm text-red-400 hover:text-red-300 text-center block mt-2">
+                    t.damato@directshadesandblinds.com
+                  </a>
                 </div>
               </div>
 
@@ -152,6 +155,9 @@ export default function AboutPage() {
                   <p className="text-sm text-white/60 text-center">
                     VP and General Manager
                   </p>
+                  <a href="mailto:bgoble@directshadesandblinds.com" className="text-sm text-red-400 hover:text-red-300 text-center block mt-2">
+                    bgoble@directshadesandblinds.com
+                  </a>
                 </div>
               </div>
 
@@ -167,6 +173,27 @@ export default function AboutPage() {
                   <p className="text-sm text-white/60 text-center">
                     Chief Estimator at Direct Shades and Blinds
                   </p>
+                  <a href="mailto:estimating@directshadesandblinds.com" className="text-sm text-red-400 hover:text-red-300 text-center block mt-2">
+                    estimating@directshadesandblinds.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Team Member - Andre */}
+              <div className="group w-80">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                    <img src="/andreLabonte.png" alt="Andre LaBonte" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Andre LaBonte
+                  </h3>
+                  <p className="text-sm text-white/60 text-center">
+                    Founder
+                  </p>
+                  <a href="mailto:andre@directshadesandblinds.com" className="text-sm text-red-400 hover:text-red-300 text-center block mt-2">
+                    andre@directshadesandblinds.com
+                  </a>
                 </div>
               </div>
             </div>
