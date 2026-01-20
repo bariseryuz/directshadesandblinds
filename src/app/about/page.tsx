@@ -189,7 +189,7 @@ export default function AboutPage() {
                     Andre LaBonte
                   </h3>
                   <p className="text-sm text-white/60 text-center">
-                    Founder
+                    Contract Administrator / Billing
                   </p>
                   <a href="mailto:andre@directshadesandblinds.com" className="text-sm text-red-400 hover:text-red-300 text-center block mt-2">
                     andre@directshadesandblinds.com
