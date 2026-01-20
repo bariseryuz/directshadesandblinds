@@ -190,7 +190,7 @@ export default function AboutPage() {
                   <div className="group w-80 shrink-0">
                     <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
                       <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/davidcathers.png" alt="David Cathers" className="w-full h-full object-cover" />
+                        <img src="/david.png" alt="David Cathers" className="w-full h-full object-cover" />
                       </div>
                       <h3 className="text-xl font-semibold text-white text-center mb-2">
                         David Cathers
