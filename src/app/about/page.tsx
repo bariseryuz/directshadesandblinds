@@ -106,157 +106,67 @@ export default function AboutPage() {
               Our Team
             </h2>
             
-            {/* Team Carousel */}
-            <div className="relative overflow-hidden">
-              <div className="flex animate-[slide_30s_linear_infinite] hover:pause-animation">
-                {/* First set */}
-                <div className="flex gap-8 shrink-0">
-                  {/* Team Member 1 - Gene */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Gene Goble
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        CEO, CFO, Owner at Direct Shades & Blinds, Inc.
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Leading the company with decades of expertise in commercial window covering solutions.
-                      </p>
-                    </div>
+            {/* First Row - Gene */}
+            <div className="flex justify-center mb-8">
+              <div className="group w-80">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                    <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
                   </div>
-
-                  {/* Team Member 2 - Tony */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Tony D&apos;Amato
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        Executive Vice President Business Development
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Driving business growth and developing strategic partnerships nationwide.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Team Member 3 - Branden */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Branden Goble
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        VP and General Manager
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Managing operations and ensuring seamless project execution across all markets.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Team Member 4 - David */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/david.png" alt="David Cathers" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        David Cathers
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        Chief Estimator at Direct Shades and Blinds
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Providing accurate project estimates and competitive bids for commercial projects.
-                      </p>
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Gene Goble
+                  </h3>
+                  <p className="text-sm text-white/60 text-center">
+                    CEO, CFO, Owner at Direct Shades & Blinds, Inc.
+                  </p>
                 </div>
+              </div>
+            </div>
 
-                {/* Duplicate set for seamless loop */}
-                <div className="flex gap-8 shrink-0 ml-8">
-                  {/* Team Member 1 - Gene */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Gene Goble
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        CEO, CFO, Owner at Direct Shades & Blinds, Inc.
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Leading the company with decades of expertise in commercial window covering solutions.
-                      </p>
-                    </div>
+            {/* Second Row - Tony, Branden, David */}
+            <div className="flex justify-center gap-8 flex-wrap">
+              {/* Team Member - Tony */}
+              <div className="group w-80">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                    <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
                   </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Tony D&apos;Amato
+                  </h3>
+                  <p className="text-sm text-white/60 text-center">
+                    Executive Vice President Business Development
+                  </p>
+                </div>
+              </div>
 
-                  {/* Team Member 2 - Tony */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Tony D&apos;Amato
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        Executive Vice President Business Development
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Driving business growth and developing strategic partnerships nationwide.
-                      </p>
-                    </div>
+              {/* Team Member - Branden */}
+              <div className="group w-80">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                    <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
                   </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    Branden Goble
+                  </h3>
+                  <p className="text-sm text-white/60 text-center">
+                    VP and General Manager
+                  </p>
+                </div>
+              </div>
 
-                  {/* Team Member 3 - Branden */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        Branden Goble
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        VP and General Manager
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Managing operations and ensuring seamless project execution across all markets.
-                      </p>
-                    </div>
+              {/* Team Member - David */}
+              <div className="group w-80">
+                <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
+                    <img src="/david.png" alt="David Cathers" className="w-full h-full object-cover" />
                   </div>
-
-                  {/* Team Member 4 - David */}
-                  <div className="group w-80 shrink-0">
-                    <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                        <img src="/david.png" alt="David Cathers" className="w-full h-full object-cover" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white text-center mb-2">
-                        David Cathers
-                      </h3>
-                      <p className="text-sm text-white/60 text-center mb-3">
-                        Chief Estimator at Direct Shades and Blinds
-                      </p>
-                      <p className="text-sm text-white/80 leading-relaxed">
-                        Providing accurate project estimates and competitive bids for commercial projects.
-                      </p>
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-semibold text-white text-center mb-2">
+                    David Cathers
+                  </h3>
+                  <p className="text-sm text-white/60 text-center">
+                    Chief Estimator at Direct Shades and Blinds
+                  </p>
                 </div>
               </div>
             </div>
