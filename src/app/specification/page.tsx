@@ -6,7 +6,7 @@ const textSections = [
   {
     id: 1,
     content: 'Division 12000 / Window Coverings Specification',
-    className: 'text-3xl md:text-7xl font-bold'
+    className: 'text-2xl md:text-7xl font-bold'
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const textSections = [
     subContent: `At Direct Shades & Blinds (DSB), we offer a dedicated Division 12 00 00 – Window Coverings Specification service designed to support architects, designers, developers, and general contractors with clear, buildable, and cost-aligned specs.
 
 Our experienced team works directly with project stakeholders to dial in the right window covering solutions—balancing design intent, performance, compliance, budget, and long-term durability.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ We assist with:
 • Alignment with project schedules, budgets, and operational needs
 
 Our goal is to eliminate ambiguity, reduce RFIs, and ensure what's specified can be delivered and installed seamlessly.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ Drapery & Soft Treatments
 • Track systems, stackback requirements, and fabric coordination
 
 Each specification is tailored to room type, orientation, code requirements, and user experience.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ Our collaborative services include:
 • Early-stage design support through construction documentation
 
 This approach allows us to align finishes, control methods, and performance criteria with the unique needs of each project—before drawings are finalized.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ This approach allows us to align finishes, control methods, and performance crit
 • A partner mindset—from early design through installation
 
 We don't just help you write the spec—we help ensure it works in the real world.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   },
   {
     id: 7,
@@ -86,7 +86,7 @@ We don't just help you write the spec—we help ensure it works in the real worl
     subContent: `Whether you're developing a new project or refining an existing set, DSB can support your team with expert-driven window covering specifications that streamline execution and protect design intent.
 
 Contact us to schedule a design meeting or Lunch & Learn.`,
-    className: 'text-2xl md:text-6xl font-bold'
+    className: 'text-xl md:text-6xl font-bold'
   }
 ];
 
@@ -150,12 +150,12 @@ function ScrollSection({ section }: SectionProps) {
         opacity: opacity,
       }}
     >
-      <div className="max-w-4xl text-center text-white">
+      <div className="max-w-4xl text-center text-white bg-white/[0.02] backdrop-blur-[2px] rounded-2xl p-8 border border-white/5">
         <h2 className={`${section.className} mb-8 leading-tight`}>
           {section.content}
         </h2>
         {section.subContent && (
-          <p className="text-base md:text-2xl leading-relaxed whitespace-pre-line">
+          <p className="text-sm md:text-2xl leading-relaxed whitespace-pre-line">
             {section.subContent}
           </p>
         )}
