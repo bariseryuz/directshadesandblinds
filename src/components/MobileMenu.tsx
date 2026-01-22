@@ -24,6 +24,7 @@ export function MobileMenu() {
     { href: '/projects', label: 'Projects' },
     { href: '/services', label: 'Services' },
     { href: '/mills', label: 'Mill Partnerships' },
+    { href: '/specification', label: 'Division 12000' },
     { href: '/contact', label: 'Request a Bid' },
   ];
 

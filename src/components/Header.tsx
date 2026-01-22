@@ -52,6 +52,7 @@ export function Header() {
                 src="/logo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
+                sizes="112px"
                 className="object-contain drop-shadow-lg"
                 priority
               />
@@ -73,13 +74,14 @@ export function Header() {
                 src="/logo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
+                sizes="128px"
                 className="object-contain drop-shadow-lg"
                 priority
               />
             </div>
           </a>
           
-          <nav className="flex gap-3 text-sm">
+          <nav className="flex gap-2 text-xs">
             {[
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
@@ -87,12 +89,13 @@ export function Header() {
               { href: '/projects', label: 'Projects' },
               { href: '/services', label: 'Services' },
               { href: '/mills', label: 'Mill Partnerships' },
+              { href: '/specification', label: 'Division 12000' },
               { href: '/contact', label: 'Request a Bid' },
             ].map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="px-3 py-1.5 rounded-full hover:bg-white/10 border border-white/10"
+                className="px-2.5 py-1 rounded-full hover:bg-white/10 border border-white/10 whitespace-nowrap"
               >
                 {item.label}
               </a>
