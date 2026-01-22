@@ -96,62 +96,27 @@ interface SectionProps {
 
 function ScrollSection({ section }: SectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(0.5);
-  const [opacity, setOpacity] = useState(0);
-  const rafRef = useRef<number | null>(null);
-  const lastScrollTime = useRef(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Cancel previous animation frame
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of section is visible
       }
+    );
 
-      // Use requestAnimationFrame for smooth updates
-      rafRef.current = requestAnimationFrame(() => {
-        if (!sectionRef.current) return;
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-        const element = sectionRef.current;
-        const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const elementCenter = rect.top + rect.height / 2;
-        const viewportCenter = windowHeight / 2;
-
-        // Calculate distance from viewport center
-        const distance = Math.abs(elementCenter - viewportCenter);
-        const maxDistance = windowHeight;
-
-        // When element is at center, scale = 1, when far away, scale = 0.5
-        const normalizedDistance = Math.min(distance / maxDistance, 1);
-        const newScale = 0.5 + (1 - normalizedDistance) * 0.5;
-        setScale(newScale);
-
-        // Fade in when entering viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const visibilityRatio = Math.min(
-            (windowHeight - rect.top) / windowHeight,
-            rect.bottom / windowHeight
-          );
-          setOpacity(Math.min(visibilityRatio * 2, 1));
-        } else {
-          setOpacity(0);
-        }
-
-        // Fade out when scrolled past
-        if (elementCenter < viewportCenter * 0.3) {
-          const fadeOutRatio = elementCenter / (viewportCenter * 0.3);
-          setOpacity(fadeOutRatio);
-        }
-      });
-    };
-
-    handleScroll(); // Initial call
-    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
       }
     };
   }, []);
@@ -159,12 +124,11 @@ function ScrollSection({ section }: SectionProps) {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center px-8 transition-all duration-300"
+      className="min-h-screen flex items-center justify-center px-8 snap-start snap-always"
       style={{
-        transform: `scale(${scale})`,
-        opacity: opacity,
-        willChange: 'transform, opacity',
-        transformOrigin: 'center center',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'scale(1)' : 'scale(0.8)',
       }}
     >
       <div className="max-w-4xl text-center text-white bg-white/[0.02] backdrop-blur-[2px] rounded-2xl p-8 border border-white/5">
@@ -222,7 +186,7 @@ export default function SpecificationPage() {
       }} />
 
       {/* Content */}
-      <div className="relative w-full" style={{ zIndex: 2 }}>
+      <div className="relative w-full snap-y snap-mandatory h-screen overflow-y-scroll" style={{ zIndex: 2 }}>
         {textSections.map((section) => (
           <ScrollSection key={section.id} section={section} />
         ))}
