@@ -98,47 +98,62 @@ function ScrollSection({ section }: SectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.5);
   const [opacity, setOpacity] = useState(0);
+  const rafRef = useRef<number | null>(null);
+  const lastScrollTime = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const element = sectionRef.current;
-      const rect = element.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const elementCenter = rect.top + rect.height / 2;
-      const viewportCenter = windowHeight / 2;
-
-      // Calculate distance from viewport center
-      const distance = Math.abs(elementCenter - viewportCenter);
-      const maxDistance = windowHeight;
-
-      // When element is at center, scale = 1, when far away, scale = 0.5
-      const normalizedDistance = Math.min(distance / maxDistance, 1);
-      const newScale = 0.5 + (1 - normalizedDistance) * 0.5;
-      setScale(newScale);
-
-      // Fade in when entering viewport
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const visibilityRatio = Math.min(
-          (windowHeight - rect.top) / windowHeight,
-          rect.bottom / windowHeight
-        );
-        setOpacity(Math.min(visibilityRatio * 2, 1));
-      } else {
-        setOpacity(0);
+      // Cancel previous animation frame
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
       }
 
-      // Fade out when scrolled past
-      if (elementCenter < viewportCenter * 0.3) {
-        const fadeOutRatio = elementCenter / (viewportCenter * 0.3);
-        setOpacity(fadeOutRatio);
-      }
+      // Use requestAnimationFrame for smooth updates
+      rafRef.current = requestAnimationFrame(() => {
+        if (!sectionRef.current) return;
+
+        const element = sectionRef.current;
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementCenter = rect.top + rect.height / 2;
+        const viewportCenter = windowHeight / 2;
+
+        // Calculate distance from viewport center
+        const distance = Math.abs(elementCenter - viewportCenter);
+        const maxDistance = windowHeight;
+
+        // When element is at center, scale = 1, when far away, scale = 0.5
+        const normalizedDistance = Math.min(distance / maxDistance, 1);
+        const newScale = 0.5 + (1 - normalizedDistance) * 0.5;
+        setScale(newScale);
+
+        // Fade in when entering viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const visibilityRatio = Math.min(
+            (windowHeight - rect.top) / windowHeight,
+            rect.bottom / windowHeight
+          );
+          setOpacity(Math.min(visibilityRatio * 2, 1));
+        } else {
+          setOpacity(0);
+        }
+
+        // Fade out when scrolled past
+        if (elementCenter < viewportCenter * 0.3) {
+          const fadeOutRatio = elementCenter / (viewportCenter * 0.3);
+          setOpacity(fadeOutRatio);
+        }
+      });
     };
 
     handleScroll(); // Initial call
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current);
+      }
+    };
   }, []);
 
   return (
