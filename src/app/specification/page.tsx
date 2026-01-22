@@ -148,6 +148,8 @@ function ScrollSection({ section }: SectionProps) {
       style={{
         transform: `scale(${scale})`,
         opacity: opacity,
+        willChange: 'transform, opacity',
+        transformOrigin: 'center center',
       }}
     >
       <div className="max-w-4xl text-center text-white bg-white/[0.02] backdrop-blur-[2px] rounded-2xl p-8 border border-white/5">
