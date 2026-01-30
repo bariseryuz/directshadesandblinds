@@ -47,13 +47,14 @@ export function Header() {
         {/* Mobile: Logo and Burger in flex container */}
         <div className="lg:hidden w-full flex items-center justify-end px-4 h-full gap-4">
           <a href="/" className="flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105 mr-auto ml-0.5">
-            <div className="relative h-28 w-28 flex-shrink-0">
+            <div className="relative h-32 w-32 flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
-                sizes="112px"
+                sizes="(max-width: 1024px) 128px, 192px"
                 className="object-contain drop-shadow-lg"
+                quality={100}
                 priority
               />
             </div>
@@ -69,13 +70,14 @@ export function Header() {
           </span>
           
           <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105">
-            <div className="relative h-32 w-32 flex-shrink-0">
+            <div className="relative h-40 w-40 flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
-                sizes="128px"
+                sizes="(max-width: 1024px) 128px, 192px"
                 className="object-contain drop-shadow-lg"
+                quality={100}
                 priority
               />
             </div>

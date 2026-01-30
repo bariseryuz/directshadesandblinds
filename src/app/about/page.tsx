@@ -9,6 +9,7 @@ export default function AboutPage() {
   const ref = useRef<HTMLDivElement>(null);
   const ref2 = useRef<HTMLDivElement>(null);
   const ref3 = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Add padding for fixed header
   useEffect(() => {
@@ -16,6 +17,13 @@ export default function AboutPage() {
     return () => {
       document.body.style.paddingTop = '0';
     };
+  }, []);
+
+  // Control video playback rate
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75;
+    }
   }, []);
 
   useEffect(() => {
@@ -85,6 +93,7 @@ export default function AboutPage() {
     <div className="relative min-h-screen bg-black">
       {/* Video Background */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted

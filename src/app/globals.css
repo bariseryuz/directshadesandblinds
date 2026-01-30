@@ -53,18 +53,15 @@ section.sticky {
 .mobile-video {
   object-fit: cover;
   object-position: center;
-  min-width: 100%;
-  min-height: 100%;
+  will-change: auto;
+  transform: translateZ(0);
 }
 
-/* On mobile, scale video to fill better and adjust position */
+/* On mobile, optimize video rendering */
 @media (max-width: 767px) {
   .mobile-video {
     object-fit: cover;
     object-position: center center;
-    transform: scale(1.1);
-    width: 100vw;
-    height: 100vh;
   }
 }
 
@@ -73,7 +70,6 @@ section.sticky {
   .mobile-video {
     object-fit: cover;
     object-position: center 40%;
-    transform: scale(1.15);
   }
 }
 

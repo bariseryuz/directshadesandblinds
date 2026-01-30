@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image';
+
 export function CertificatesMarquee() {
   const certificates = [
     { name: "ISO 9001", image: "/logo_iso9001.png" },
@@ -33,9 +35,12 @@ export function CertificatesMarquee() {
                 key={`${cert.name}-${index}`}
                 className="marquee-item"
               >
-                <img
+                <Image
                   src={cert.image}
                   alt={cert.name}
+                  width={48}
+                  height={48}
+                  loading="lazy"
                   className="cert-logo"
                 />
               </div>

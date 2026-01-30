@@ -115,8 +115,9 @@ export default function HomePage() {
         loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         className="fixed inset-0 w-full h-full opacity-50 sm:opacity-60 mobile-video"
+        style={{ objectFit: 'cover' }}
       >
         <source src="/home.mp4" type="video/mp4" />
       </video>
@@ -205,6 +206,7 @@ export default function HomePage() {
                     src="/project1.png" 
                     alt="Los Angeles Project" 
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -227,6 +229,7 @@ export default function HomePage() {
                     src="/project2.png" 
                     alt="Anaheim Project" 
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -249,6 +252,7 @@ export default function HomePage() {
                     src="/project3.png" 
                     alt="San Diego Project" 
                     fill
+                    loading="lazy"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>

@@ -44,6 +44,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
             
             <div className="mt-6 text-xs">© {new Date().getFullYear()} All rights reserved.</div>
+            
+            <div className="mt-4 text-xs text-white/50">
+              ARIZONA - ROC 331348 | CALIFORNIA - CSLB #972586 | OREGON - CCB #221928 | WASHINGTON - DIRECSB819OK
+            </div>
           </div>
         </footer>
       </body>
