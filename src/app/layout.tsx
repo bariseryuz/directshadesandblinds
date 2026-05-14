@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       'Mill-direct commercial window covering solutions for multifamily, hospitality, healthcare, and office projects nationwide. Bid-ready with 25+ years of experience.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/project1.png',
         width: 1200,
         height: 630,
         alt: 'Direct Shades & Blinds Inc — National Commercial Window Coverings',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Direct Shades & Blinds Inc — National Commercial Window Coverings',
     description:
       'Mill-direct commercial window covering solutions for multifamily, hospitality, healthcare, and office projects nationwide.',
-    images: ['/og-image.png'],
+    images: ['/project1.png'],
   },
   icons: {
     icon: '/logo.png',

@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <div className="min-h-[calc(100dvh-var(--header-height))] flex flex-col items-center justify-center pt-[var(--header-height)]">
-          <h1 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-white"></h1>
+          <h1 className="sr-only">Commercial Window Covering Projects</h1>
           <ProjectsCarousel />
         </div>
       </div>

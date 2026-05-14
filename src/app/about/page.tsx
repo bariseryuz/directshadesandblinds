@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function AboutPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -120,7 +121,7 @@ export default function AboutPage() {
               <div className="group w-80">
                 <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                    <img src="/genegoble.png" alt="Gene Goble" className="w-full h-full object-cover" />
+                    <Image src="/genegoble.png" alt="Gene Goble" width={128} height={128} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center mb-2">
                     Gene Goble
@@ -138,7 +139,7 @@ export default function AboutPage() {
               <div className="group w-80">
                 <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                    <img src="/tony.png" alt="Tony D'Amato" className="w-full h-full object-cover" />
+                    <Image src="/tony.png" alt="Tony D'Amato" width={128} height={128} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center mb-2">
                     Tony D&apos;Amato
@@ -156,7 +157,7 @@ export default function AboutPage() {
               <div className="group w-80">
                 <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                    <img src="/brandengoble.png" alt="Branden Goble" className="w-full h-full object-cover" />
+                    <Image src="/brandengoble.png" alt="Branden Goble" width={128} height={128} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center mb-2">
                     Branden Goble
@@ -174,7 +175,7 @@ export default function AboutPage() {
               <div className="group w-80">
                 <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                    <img src="/david.png" alt="David Cathers" className="w-full h-full object-cover" />
+                    <Image src="/david.png" alt="David Cathers" width={128} height={128} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center mb-2">
                     David Cathers
@@ -192,7 +193,7 @@ export default function AboutPage() {
               <div className="group w-80">
                 <div className="relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 overflow-hidden">
-                    <img src="/andreLabonte.png" alt="Andre LaBonte" className="w-full h-full object-cover" />
+                    <Image src="/andreLabonte.png" alt="Andre LaBonte" width={128} height={128} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold text-white text-center mb-2">
                     Andre LaBonte

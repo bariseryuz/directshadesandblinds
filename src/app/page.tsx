@@ -115,7 +115,7 @@ export default function HomePage() {
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         className="fixed inset-0 w-full h-full opacity-50 sm:opacity-60 mobile-video"
         style={{ objectFit: 'cover' }}
       >
