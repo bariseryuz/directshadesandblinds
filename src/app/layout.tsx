@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     images: ['/project1.png'],
   },
   icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
+    icon: '/logodsb.png',
+    apple: '/logodsb.png',
   },
 };
 
@@ -84,7 +84,7 @@ const jsonLd = {
   '@type': 'HomeAndConstructionBusiness',
   name: 'Direct Shades & Blinds Inc',
   url: BASE_URL,
-  logo: `${BASE_URL}/logo.png`,
+  logo: `${BASE_URL}/logodsb.png`,
   description:
     'Mill-direct commercial window covering solutions for multifamily, hospitality, healthcare, and office projects nationwide.',
   telephone: '',
