@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --header-height: 70px;
+  --header-height: 100px;
 }
 
 @media (min-width: 768px) {
   :root {
-    --header-height: 160px;
+    --header-height: 180px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --header-height: 140px;
+    --header-height: 180px;
   }
 }
 

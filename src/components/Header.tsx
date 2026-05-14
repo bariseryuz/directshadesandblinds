@@ -47,12 +47,12 @@ export function Header() {
         {/* Mobile: Logo and Burger in flex container */}
         <div className="lg:hidden w-full flex items-center justify-end px-4 h-full gap-4">
           <a href="/" className="flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105 mr-auto ml-0.5">
-            <div className="relative h-32 w-32 flex-shrink-0">
+            <div className="relative h-full w-28 flex-shrink-0">
               <Image 
                 src="/logo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
-                sizes="(max-width: 1024px) 128px, 192px"
+                sizes="112px"
                 className="object-contain drop-shadow-lg"
                 quality={100}
                 priority
@@ -65,8 +65,8 @@ export function Header() {
         
         {/* Desktop: Logo left, nav right */}
         <div className="hidden lg:flex items-center justify-between gap-6 w-full h-full px-6">
-          <a href="/" className="flex items-center flex-shrink-0 group transition-all hover:scale-105">
-            <div className="relative h-40 w-40 flex-shrink-0">
+          <a href="/" className="flex items-center flex-shrink-0 group transition-all hover:scale-105 h-full py-2">
+            <div className="relative h-full w-48 flex-shrink-0">
               <Image
                 src="/logo.png"
                 alt="Direct Shades & Blinds Inc Logo"
