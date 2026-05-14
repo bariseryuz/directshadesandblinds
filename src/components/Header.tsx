@@ -63,19 +63,15 @@ export function Header() {
           <MobileMenu />
         </div>
         
-        {/* Desktop: All elements in centered flex container */}
-        <div className="hidden lg:flex items-center justify-between gap-6 w-full h-full relative px-6">
-          <span className="text-xl font-bold tracking-wide text-white">
-            Direct Shades & Blinds Inc
-          </span>
-          
-          <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3 flex-shrink-0 group transition-all hover:scale-105">
+        {/* Desktop: Logo left, nav right */}
+        <div className="hidden lg:flex items-center justify-between gap-6 w-full h-full px-6">
+          <a href="/" className="flex items-center flex-shrink-0 group transition-all hover:scale-105">
             <div className="relative h-40 w-40 flex-shrink-0">
-              <Image 
-                src="/logo.png" 
-                alt="Direct Shades & Blinds Inc Logo" 
+              <Image
+                src="/logo.png"
+                alt="Direct Shades & Blinds Inc Logo"
                 fill
-                sizes="(max-width: 1024px) 128px, 192px"
+                sizes="192px"
                 className="object-contain drop-shadow-lg"
                 quality={100}
                 priority
