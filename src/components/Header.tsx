@@ -49,7 +49,7 @@ export function Header() {
           <a href="/" className="flex items-center flex-shrink-0 group transition-all hover:scale-105 mr-auto ml-0.5 h-full py-2">
             <div className="relative h-full w-48 flex-shrink-0">
               <Image 
-                src="/logodsb.png" 
+                src="/logoo.png" 
                 alt="Direct Shades & Blinds Inc Logo" 
                 fill
                 sizes="192px"
@@ -68,7 +68,7 @@ export function Header() {
           <a href="/" className="flex items-center flex-shrink-0 group transition-all hover:scale-105 h-full py-2">
             <div className="relative h-full w-48 flex-shrink-0">
               <Image
-                src="/logodsb.png"
+                src="/logoo.png"
                 alt="Direct Shades & Blinds Inc Logo"
                 fill
                 sizes="192px"
